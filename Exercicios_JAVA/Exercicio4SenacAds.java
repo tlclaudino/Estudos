@@ -68,13 +68,22 @@ switch(choose){
     }
     //2) Crie um programa que imprima um arrays com Foreach. 
     case 2:{
-
+        int[] numeros = new int[3];
+        for (int i: numeros ){
+            System.out.println(i);
+        }
+        int[] numeros2 = {1,2,3,4,5};
+        for (int j = 0; j < numeros2.length; j++) {
+            System.out.println(numeros2[j]);
+            
+        }
+        
+        }
 
     }
 
 }
-
-} while (choose != 0);
+while (choose != 0);
     
     sc.close();
 }
