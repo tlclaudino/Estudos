@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Exemplo 01 - Formulários</title>
+</head>
+<body>
+    <h1>HTML Formulários</h1>
+    <form action="" method="GET"><!--Para mostrar os dados no linl do site use GET ou POST para oculta-los-->
+    <fieldset>
+        <legend>Cadastro</legend>
+        <label for="nome">Primeiro Nome:</label>
+        <input text="text" id="nome" name="nome">
+        <br>
+        <label for="nome">Segundo Nome:</label>
+        <input text="text" id="sobrenome" name="sobrenome">
+        <br>
+        <input type="sumit" value="Enviar">
+        </fieldset>
+    </form>
+    <br>
+    <h1>Pesquisa de Satisfação</h1>
+    <form action="">
+        <fieldset>
+        <h3>O que você achou do site</h3>
+        <input type="radio" name="site" value="muitobom" >Muito Bom
+        <input type="radio" name="site" value="bom" >Bom
+        <input type="radio" name="site" value="Regular" >Rgular
+        <input type="radio" name="site" value="umlixo" checked>Um Monte de Bosta<!-- use "checked" para já deixar pré definido uma marcação-->
+        
+        <h3>Qual seção você mais gostou?</h3>
+        <select name="gostou" id="gostou">
+        <option value="emcartaz">Em Cartaz</option>
+        <option value="terror">Terror</option>
+        <option value="suspense">Suspense</option>
+        <option value="fantasia">fantasia</option>
+        </select>
+        <label for="outra">Outra*</label>
+        <input type="text" name="outra" id="outra" required><!-- use "required" para obrigar o preenchimento de um campo-->
+
+        <h3>Deixe o seu contato</h3>
+        <pre><!--A TAG "pre" permite a identação do texto-->
+        Nome: <input type="text">
+        Email:<input type="text">
+        Phone:<input type="text">
+        
+        </pre>
+        <input type="checkbox"><strong>Envie-me novidades do site por E-MAIL</strong><!-- Use "STRONG" para deixar o texto em negrito-->
+        <input type="sumit" value="Enviar">
+        <input type="reset" value="Limpar Formulário">
+        </fieldset>
+</body>
+</html>
