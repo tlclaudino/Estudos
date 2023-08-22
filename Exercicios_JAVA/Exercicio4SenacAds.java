@@ -31,4 +31,51 @@ Conforme as respostas sim, deve imprimir a classificação da pessoa que respond
 @since 2023-08-21 
 */
 
-public class Exercicio4SenacAdsjava 
+import java.util.Scanner;
+
+public class Exercicio4SenacAds {
+    //1) Crie um programa que questione a quantidade de notas a ser informada, receba as notas e calcule a média.
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    float totalnota = 0;
+    int choose;
+    do {
+
+        System.out.println("escolha uma opção");
+        System.out.println("1 Inserir notas para calcular a média");
+        System.out.println("2 Imprimir Array com Foreach");
+        System.out.println(" 0 Sair");
+        choose = sc.nextInt();
+
+switch(choose){
+    case 1:{
+
+    System.out.println("Insira as notas e calcule as médias");
+    System.out.println("Insira a quantidade de numeros que deseja verificar");
+    
+    int qntnota;
+    qntnota = sc.nextInt();
+    
+    
+    for (int i=1; i<=qntnota; i++) {
+    System.out.println("Informe a "+ i +" nota:");
+    float nota = sc.nextFloat();
+    totalnota += nota;
+    } 
+    float media = totalnota/qntnota;
+    System.out.println("A média das notas é "+ media);
+
+    }
+    //2) Crie um programa que imprima um arrays com Foreach. 
+    case 2:{
+
+
+    }
+
+}
+
+} while (choose != 0);
+    
+    sc.close();
+}
+}
