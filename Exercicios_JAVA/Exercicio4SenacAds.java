@@ -44,6 +44,7 @@ public class Exercicio4SenacAds {
         System.out.println("escolha uma opção");
         System.out.println("1 Inserir notas para calcular a média");
         System.out.println("2 Imprimir Array com Foreach");
+        System.out.println("2 Imprimir valores introduzidos no Array");
         System.out.println(" 0 Sair");
         choose = sc.nextInt();
 
@@ -64,7 +65,7 @@ switch(choose){
     } 
     float media = totalnota/qntnota;
     System.out.println("A média das notas é "+ media);
-
+    break;
     }
     //2) Crie um programa que imprima um arrays com Foreach. 
     case 2:{
@@ -77,12 +78,38 @@ switch(choose){
             System.out.println(numeros2[j]);
             
         }
-        
+        break;
         }
+     // 3) Crie um programa que leia 10 valores double e salve em um array, depois imprima esses valores. 
+    case 3:{ 
+        double[] valores = new double[10];
+        
+        
+        
+        for (int i = 0; i < 10; i++) {
+        System.out.print("Digite o valor " + (i + 1) + ": ");
+        valores[i] = sc.nextDouble();
+        }
+        
+        
+        System.out.println("Valores:");
+        for (double valor : valores) {
+            System.out.println(valor);
+        }
+        break;
+    }
+}
 
+
+
+
+
+
+
+    
     }
 
-}
+
 while (choose != 0);
     
     sc.close();
