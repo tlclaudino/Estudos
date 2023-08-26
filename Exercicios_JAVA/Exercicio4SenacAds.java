@@ -1,4 +1,4 @@
-// Exercicio 04 JAVA SENAC ADS 2º SEMESTRE
+// Exercicio 04 JAVA SENAC ADS 2º SEMESTRE JACKSON
 
 /*
 *1) Crie um programa que questione a quantidade de notas a ser informada, receba as notas e calcule a média.
