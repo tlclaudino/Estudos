@@ -9,6 +9,13 @@
             "name": "Exercicio4SenacAds",
             "request": "launch",
             "mainClass": "Exercicio4SenacAds",
+            "projectName": "Estudos_95362aca"
+        },
+        {
+            "type": "java",
+            "name": "Exercicio4SenacAds",
+            "request": "launch",
+            "mainClass": "Exercicio4SenacAds",
             "projectName": "Estudos_61131ef5"
         }
     ]
