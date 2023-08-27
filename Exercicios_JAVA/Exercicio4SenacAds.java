@@ -35,6 +35,9 @@ import java.util.Scanner;
 
 public class Exercicio4SenacAds {
     //1) Crie um programa que questione a quantidade de notas a ser informada, receba as notas e calcule a média.
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     float totalnota = 0;
@@ -123,8 +126,9 @@ switch(choose){
 
 
     
-} while (choose >= 0);
+} while(choose != 0);
     
+sc.close();
     }
-    }
+}
 }
