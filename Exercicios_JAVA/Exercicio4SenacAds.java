@@ -44,7 +44,8 @@ public class Exercicio4SenacAds {
         System.out.println("escolha uma opção");
         System.out.println("1 Inserir notas para calcular a média");
         System.out.println("2 Imprimir Array com Foreach");
-        System.out.println("2 Imprimir valores introduzidos no Array");
+        System.out.println("3 Imprimir valores introduzidos no Array");
+        System.out.println("4 Imprimir valores introduzidos no Array para saber se são par ou impar");
         System.out.println(" 0 Sair");
         choose = sc.nextInt();
 
@@ -97,7 +98,22 @@ switch(choose){
             System.out.println(valor);
         }
         break;
+
     }
+    //4) Crie um programa que leia 10 valores int e salve em um array, depois imprima se esses valores são pares ou ímpares. 
+    case 4:{
+        int[] valoresint = new int[10];
+
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Digite o valor "+ (i + 1) + " ");
+            valoresint[i] = sc.nextInt();
+        }
+        System.out.println("Valores:");
+        for (int valor : valoresint) {
+            System.out.println(valor + " é " + (valor % 2 == 0 ? "par" : "ímpar"));
+        }
+    
 }
 
 
@@ -107,11 +123,8 @@ switch(choose){
 
 
     
-    }
-
-
-while (choose != 0);
+} while (choose >= 0);
     
-    sc.close();
-}
+    }
+    }
 }
