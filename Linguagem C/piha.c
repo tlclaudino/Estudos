@@ -162,7 +162,7 @@ void main()
 
         printf("\n ====3. Ver Topo (Peek)=====\n");
 
-        printf("\n ====4. Ver Tamnaho da Pilha=====\n");
+        printf("\n ====4. Ver Tamanho da Pilha=====\n");
 
         printf("=======5.Sair======\n");
 
@@ -233,13 +233,13 @@ void main()
 
             case 4:
 
-            printf("\n Tamnho da Pilha: %d\n",size(stack));
+            printf("\n Tamanho da Pilha: %d\n",size(stack));
 
             break;
 
             case 5:
 
-                    print("Saindo do Programa. \n");
+                    printf("Saindo do Programa. \n");
 
                     while(!isEmpty(stack))
 

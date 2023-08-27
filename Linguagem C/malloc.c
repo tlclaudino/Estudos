@@ -6,7 +6,7 @@
 
  
 
-void main()
+int main()
 
 {
 
@@ -49,4 +49,7 @@ printf("Pointer Value %d\n\n\n"  , *p );
  
 
 free(p);
+
 return(0);
+}
+
