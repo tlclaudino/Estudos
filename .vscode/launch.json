@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Helloworld",
+            "request": "launch",
+            "mainClass": "Helloworld",
+            "projectName": "Estudos_95362aca"
+        },
+        {
+            "type": "java",
             "name": "Exercicio4SenacAds",
             "request": "launch",
             "mainClass": "Exercicio4SenacAds",
