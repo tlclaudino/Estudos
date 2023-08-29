@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AtividadeAvaliativa1",
+            "request": "launch",
+            "mainClass": "AtividadeAvaliativa1",
+            "projectName": "Estudos_61131ef5"
+        },
+        {
+            "type": "java",
             "name": "Helloworld",
             "request": "launch",
             "mainClass": "Helloworld",
