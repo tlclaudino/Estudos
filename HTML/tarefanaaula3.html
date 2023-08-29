@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 3 Prova HTML</title>
+    <style>
+      .primeiraFrase {
+        background-color: rgb(180, 163, 6);
+        width: 38%;
+      }
+      .anside {
+        width: 12%;
+        text-align: left;
+        position: absolute;
+        margin-top: 7px;
+      }
+      .center {
+        position: absolute;
+        margin-left: 165px;
+      }
+      .button {
+        position: absolute;
+        margin-top: 450px;
+      }
+    </style>
+  </head>
+  <body >
+    <table border ='2'>
+ 
+    <div class="primeiraFrase">
+      <h5>SISTEMA DE GESTÃO ACADÊMICA</h5>
+    </div>
+    <h5>MANUTENÇÃO DE ÚSUARIOS DO SISTEMA INTERNO</h5>
+    <form action="">
+      <div class="anside">
+        <label>Login</label><br /><br />
+        <label>Senha</label><br /><br />
+        <label>Status</label><br /><br />
+        <label>Tipo</label><br /><br />
+        <label>Data Criação</label><br /><br />
+        <label>Perfil</label><br /><br /><br /><br /><br />
+        <label>Observações</label><br /><br /><br /><br /><br /><br />
+        <label>Módulos</label><br /><br />
+      </div>
+      <div class="center">
+        <input type="text" name="login" id="login" required/><br /><br />
+        <input type="password" name="login" id="login" required/><br /><br />
+        <select>
+          <option>Inativo</option>
+          <option>Ativo</option></select
+        ><br /><br />
+        <input type="radio" name="tipo" id="tipo" checked />Técnico
+        <input type="radio" name="tipo" id="tipo" />Professor
+        <input type="radio" name="tipo" id="tipo" />Aluno <br /><br />
+        <input type="date" name="dtCriacao" id="dtCriacao" required/><br /><br />
+        <input type="radio" name="perfil" id="perfil" checked />Convidado
+        <input type="radio" name="perfil" id="perfil" />Administrador
+        <br /><br />
+        <textarea style="height: 110px; width: 200px"></textarea><br /><br />
+        <input type="checkbox" name="modulo" id="modulo" />Compras
+        <input type="checkbox" name="modulo" id="modulo" />Biblioteca
+        <input type="checkbox" name="modulo" id="modulo" />Acadêmico
+        <br /><br />
+        <input type="checkbox" name="modulo" id="modulo" />Documentação
+        <input type="checkbox" name="modulo" id="modulo" />Recursos Humanos
+      </div>
+      <div class="button">
+        <input type="reset" value="Limpar" />
+        <input type="submit" value="Cadastrar" />
+      </div>
+    </form>
+  </body>
+</html>
