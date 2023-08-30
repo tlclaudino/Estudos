@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+  
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css"> <!--Para vincular um arquivo estilizados "CSS" dentro do HTML-->
+    <style>
+        /* ASTERISCO TORNA A ESTILIZAÇÃO UNIVERSAL PARA TODAS AS TAGS    */
+        *{
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        /* seletor por tag    */
+        p{
+            background-color: red;
+        }
+        body {
+            background-image: url("");
+            background-repeat: no-repeat;
+
+        }
+        /* seletor por classe para estilizar diversas classes ao mesmo tempo    */
+        .paragrafo{
+                background-color: aquamarine;
+                color: red;
+                }
+         /* seletor por ID para criar estilo unico que será aplicada em apenas uma marcação para outras marcações criar ID diferente    */
+        #paragrafoPorId{
+        background-color: yellow;
+        color: green;
+        }
+        </style>
+        </head>
+        <body>
+            <h1>Aula de CSS</h1>
+
+            <p class="paragrafo"> Olá Mundo dos Estilos CSS</p>
+            <p class="paragrafo"> Olá Mundo dos Estilos CSS</p>
+            <p id="paragrafoPorId"> Olá Mundo dos Estilos CSS</p>
+            <p> Olá Mundo dos Estilos CSS</p>
+            <p> Olá Mundo dos Estilos CSS</p>
+
+        </body>
+        </html>
