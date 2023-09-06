@@ -15,14 +15,13 @@ Desenvolva um programa em Java que permita aos usuários realizar operações si
 * Crie um ou mais coleções de strings para armazenar os nomes de alunos e seus conceitos.
    * Os conceitos podem ser 'O', 'B', 'S' ou 'I'.
    * Caso seja criada mais de uma coleção, os nomes e os conceitos sempre devem corresponder no índice.
-      * Exemplo: João está no índice 0 das coleções e seu conceito está no índice 0 das coleções.
-   
-* Crie um vetor de inteiros para armazenar a quantidade de cada conceito.
+   * Exemplo: João está no índice 0 das coleções e seu conceito está no índice 0 das coleções.
+   * Crie um vetor de inteiros para armazenar a quantidade de cada conceito.
    * O vetor deve ter 4 posições, uma para cada conceito.
    * O vetor deve ser inicializado com 0 em todas as posições.
    * O vetor deve ser atualizado sempre que um novo conceito for inserido.
 
-* Implemente um menu de opções numeradas que permita aos usuários:
+   * Implemente um menu de opções numeradas que permita aos usuários:
 
    * Inserir um novo aluno e seu conceito.
    * Listar todos os alunos e seus conceitos.
@@ -54,8 +53,7 @@ import java.util.Scanner;
 public class AtividadeAvaliativa1 { //abre o corpo da classe
     public static void main(String[] args) { //abre o PSVM
         Scanner sc = new Scanner(System.in); //cria o objeto "sc" da classe "Scanner para inserir dados do usuário"
-        int choose;
-       
+        int choose;       
         ArrayList<String> alunoscadastrados = new ArrayList<>();//criado array para acumular os alunos cadastrados
         ArrayList<String> notascadastradas = new ArrayList<>();//criado array para acumular as notas cadastradas
         do { //abre o do/while
@@ -114,8 +112,7 @@ public class AtividadeAvaliativa1 { //abre o corpo da classe
                         System.out.println("Relação Anulo/Nota");
                         for (String conteudo : notascadastradas){
                         System.out.println(conteudo);    
-                        }//fecha o for     
-                             
+                        }//fecha o for                                  
                         break;
                         //fecha case 6
     } //fecha o switch
