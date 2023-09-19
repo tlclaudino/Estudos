@@ -26,23 +26,23 @@ import java.time.Period;
 public class Pessoa {
 
 
-    String nome;
-    double peso;
-    double altura;
-    LocalDate dataNascimento;
+    public String nome; //atributos
+    public double peso;
+    public double altura;
+    public String dataNascimento;
 
 
 
-    public Pessoa (String nome, double peso, double altura, LocalDate dataNascimento) {
-        this.nome = nome;
+    public Pessoa (String nome, double peso, double altura, LocalDate dataNascimento)  { //parametros
+        this.nome = nome; //this representa o objeto na qual vc ta trabalhando
         this.peso = peso;
         this.altura = altura;
         this.dataNascimento = dataNascimento;
     }
 
-    public double calcularIMC() {
-        double  imc = peso/(altura*altura) {
-            if imc 
+    public double calcularIMC() { //cria o metodo
+        return this.peso /(this.altura*this.altura);
+            
             
             
 
