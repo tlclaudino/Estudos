@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e91cba;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.logo {
+    text-align: left;
+    padding: 10px;
+}
+
+.logo img {
+    max-width: 200px; 
+}
+
+header {
+    background-color: #ffffff;
+    color: #c92ba1;
+    padding: 10px 0;
+    text-align: center;
+    
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    
+}
+
+/* Banner */
+#banner {
+    text-align: center;
+    padding: 40px;
+}
+
+#banner h2 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Seção de Serviços */
+#servicos {
+    background-color: #fff;
+    padding: 40px;
+    background-color: #cd88bc;
+}
+
+#servicos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#servicos li {
+    margin-bottom: 10px;
+}
+
+/* Seção Sobre Nós */
+#sobre {
+    background-color: #f9f9f9;
+    padding: 40px;
+}
+
+#sobre p {
+    line-height: 1.5;
+}
+
+/* Seção de Contato */
+#contato {
+    padding: 40px;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+a:hover {
+    color: #ff6f61;
+}
