@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+import ProjetoBiblioteca.Autor;
+import ProjetoBiblioteca.Biblioteca;
+import ProjetoBiblioteca.Livro;
+
 public class Gerenciar {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

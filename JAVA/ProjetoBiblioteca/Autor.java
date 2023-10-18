@@ -1,4 +1,7 @@
+package ProjetoBiblioteca;
 import java.util.ArrayList;
+
+import Pessoa;
 
 public class Autor extends Pessoa {
     private String nacionalidade;
