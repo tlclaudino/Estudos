@@ -1,52 +1,49 @@
-package ProjetoBiblioteca;
-import java.util.ArrayList;
+class Livro 
+{
+    String titulo;
+    Autor autor;
+    boolean disponivel;
 
-public class Livro {
-    public String titulo;
-    public Autor autor;
-    public boolean disponivel;
-
-    public static ArrayList<Livro> livros = new ArrayList<>();
-
-    public Livro(String titulo, Autor autor, boolean disponivel) {
+    public Livro(String titulo, Autor autor) 
+    {
         this.titulo = titulo;
         this.autor = autor;
-        this.disponivel = disponivel;
-
-        livros.add(this);
-    }
-
-    public String toString() {
-        return "Título: " + this.titulo 
-            + ". Autor: " + this.autor.getNome() 
-            + ". Disponível: " + (this.disponivel ? "Sim" : "Não");
-    }
-
-    public static void listarLivros() {
-        for(int i = 0; i < livros.size(); i++) {
-            System.out.println(i + " - " + livros.get(i).toString());
-        }
-    }
-
-    public static void listarLivrosPorAutor(Autor autor) {
-        for(int i = 0; i < livros.size(); i++) {
-            if (livros.get(i).autor == autor) {
-                System.out.println(i + " - " + livros.get(i).toString());
-            }
-        }
-    }
-
-    public void emprestar() throws Exception {
-        if (!this.disponivel) {
-            throw new Exception("Livro não está disponível");
-        }
-        this.disponivel = false;
-    }
-
-    public void devolver() throws Exception {
-        if (this.disponivel) {
-            throw new Exception("Livro já está disponível");
-        }
         this.disponivel = true;
     }
-}
+
+    public String getTitulo() 
+    {
+        return titulo;
+    }
+
+    public Autor getAutor() 
+    {
+        return autor;
+    }
+
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
+    public void emprestar() 
+    {
+        if (disponivel)
+         {
+            disponivel = false;
+            System.out.println("Livro emprestado: " + titulo);
+        } else 
+        {
+            System.out.println("Este livro já está emprestado.");
+        }
+    }
+
+    public void devolver() 
+    {
+        if (!disponivel) 
+        {
+            disponivel = true;
+            System.out.println("Livro devolvido: " + titulo);
+        } else {
+            System.out.println("Este livro já está disponível.");
+        }
+    }

@@ -1,6 +1,5 @@
-package ProjetoBiblioteca;
 import java.util.Scanner;
-public class geral 
+public class Geral 
 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
