@@ -1,8 +1,8 @@
+package ProjetoBiblioteca;
 class Autor {
 
     String nome;
 
- 
 
     public Autor(String nome) {
 
@@ -10,7 +10,6 @@ class Autor {
 
     }
 
- 
 
     public String getNome() {
 
@@ -18,7 +17,6 @@ class Autor {
 
     }
 
- 
 
     public String toString() {
 
@@ -27,5 +25,3 @@ class Autor {
     }
 
 }
-
- 
