@@ -1,5 +1,10 @@
-package ProjetoBiblioteca;
+
+
 import java.util.Scanner;
+
+import ProjetoBiblioteca.Autor;
+import ProjetoBiblioteca.Biblioteca;
+import ProjetoBiblioteca.Livro;
 public class Geral 
 {
     public static void main(String[] args) {

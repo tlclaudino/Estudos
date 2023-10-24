@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Gerenciar",
+            "request": "launch",
+            "mainClass": "ProjetoBiblioteca.Gerenciar",
+            "projectName": "Estudos_61131ef5"
+        },
+        {
+            "type": "java",
             "name": "Geral",
             "request": "launch",
             "mainClass": "ProjetoBiblioteca.Geral",
