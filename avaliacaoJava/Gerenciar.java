@@ -1,3 +1,4 @@
+package avaliacaoJava;
 import java.util.Scanner;
 
 public class Gerenciar {

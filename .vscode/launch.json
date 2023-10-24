@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Gerenciar",
             "request": "launch",
+            "mainClass": "avaliacaoJava.Gerenciar",
+            "projectName": "Estudos_61131ef5"
+        },
+        {
+            "type": "java",
+            "name": "Gerenciar",
+            "request": "launch",
             "mainClass": "ProjetoBiblioteca.Gerenciar",
             "projectName": "Estudos_61131ef5"
         },

@@ -1,3 +1,4 @@
+package avaliacaoJava;
 public class Pessoa {
     protected String nome;
 
