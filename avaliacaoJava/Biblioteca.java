@@ -1,38 +1,39 @@
 package avaliacaoJava;
 import java.util.ArrayList;
-
-public class Biblioteca {
-    public String nome;
-    public ArrayList<Livro> livros;
-
-    public static ArrayList<Biblioteca> bibliotecas = new ArrayList<>();
+import java.util.List;
+class Biblioteca {
+    private String nome;
+    private List<Livro> livros;
 
     public Biblioteca(String nome) {
         this.nome = nome;
         this.livros = new ArrayList<>();
-
-        bibliotecas.add(this);
     }
 
-    public String toString() {
-        return "Nome: " + this.nome;
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public List<Livro> getLivros() {
+        return livros;
     }
 
     public void adicionarLivro(Livro livro) {
-        this.livros.add(livro);
+        livros.add(livro);
     }
 
     public void listarLivros() {
-        for(int i = 0; i < this.livros.size(); i++) {
-            System.out.println(i + " - " + this.livros.get(i).toString());
+        for (Livro livro : livros) {
+            System.out.println(livro);
         }
     }
 
-    public static void listarBibliotecas() {
-        for(int i = 0; i < bibliotecas.size(); i++) {
-            Biblioteca biblioteca = bibliotecas.get(i);
-            System.out.println(i + " - " + biblioteca.toString());
-            biblioteca.listarLivros();
-        }
+    @Override
+    public String toString() {
+        return nome;
     }
 }

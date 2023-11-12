@@ -1,52 +1,43 @@
 package avaliacaoJava;
-import java.util.ArrayList;
-
-public class Livro {
-    public String titulo;
-    public Autor autor;
-    public boolean disponivel;
-
-    public static ArrayList<Livro> livros = new ArrayList<>();
+class Livro {
+    private String titulo;
+    private Autor autor;
+    private boolean disponivel;
 
     public Livro(String titulo, Autor autor, boolean disponivel) {
         this.titulo = titulo;
         this.autor = autor;
         this.disponivel = disponivel;
-
-        livros.add(this);
     }
 
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
+
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
+    public void emprestar() {
+        if (disponivel) {
+            disponivel = false;
+        }
+    }
+
+    public void devolver() {
+        if (!disponivel) {
+            disponivel = true;
+        }
+    }
+    public String getTitulo() {
+        return titulo;
+    }
+    @Override
     public String toString() {
-        return "Título: " + this.titulo 
-            + ". Autor: " + this.autor.getNome() 
-            + ". Disponível: " + (this.disponivel ? "Sim" : "Não");
-    }
-
-    public static void listarLivros() {
-        for(int i = 0; i < livros.size(); i++) {
-            System.out.println(i + " - " + livros.get(i).toString());
-        }
-    }
-
-    public static void listarLivrosPorAutor(Autor autor) {
-        for(int i = 0; i < livros.size(); i++) {
-            if (livros.get(i).autor == autor) {
-                System.out.println(i + " - " + livros.get(i).toString());
-            }
-        }
-    }
-
-    public void emprestar() throws Exception {
-        if (!this.disponivel) {
-            throw new Exception("Livro não está disponível");
-        }
-        this.disponivel = false;
-    }
-
-    public void devolver() throws Exception {
-        if (this.disponivel) {
-            throw new Exception("Livro já está disponível");
-        }
-        this.disponivel = true;
+        return titulo + " - " + autor.getNome() + " (" + (disponivel ? "Disponível" : "Indisponível") + ")";
     }
 }
