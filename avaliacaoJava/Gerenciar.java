@@ -1,159 +1,121 @@
 package avaliacaoJava;
-import java.util.List;
+
 import java.util.Scanner;
 
 public class Gerenciar {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Biblioteca biblioteca = new Biblioteca("Minha Biblioteca");
+        Scanner sc = new Scanner(System.in);
+
+        int op = 0;
 
         do {
-            System.out.println("\nMenu da Biblioteca:");
-            System.out.println("1. Adicionar Livro");
-            System.out.println("2. Listar Livros");
-            System.out.println("3. Mídia");
-            System.out.println("4. Sair");
-            System.out.print("Escolha uma opção: ");
-
-            int escolha = scanner.nextInt();
-            scanner.nextLine();
-
-            switch (escolha) {
-                case 1:
-                    adicionarLivro(biblioteca, scanner);
-                    break;
-                case 2:
-                    listarLivros(biblioteca);
-                    break;
-                case 3:
-                    menuMidia(scanner, biblioteca);
-                    break;
-                case 4:
-                    System.out.println("Saindo da Biblioteca. Até logo!");
-                    System.exit(0);
-                    break;
-                default:
-                    System.out.println("Opção inválida. Tente novamente.");
-                    break;
+            System.out.println("Minha Biblioteca");
+            System.out.println("0 - Sair");
+            System.out.println("1 - Criar autor");
+            System.out.println("2 - Criar livro");
+            System.out.println("3 - Criar mídia digital");
+            System.out.println("4 - Criar biblioteca");
+            System.out.println("5 - Adicionar livro");
+            System.out.println("6 - Emprestar livro");
+            System.out.println("7 - Devolver livro");
+            System.out.println("8 - Adicionar mídia digital");
+            System.out.println("9 - Emprestar mídia digital");
+            System.out.println("10 - Devolver mídia digital");
+            try {
+                op = sc.nextInt();
+            } catch (Exception e) {
+                op = 99;
             }
-        } while (true);
-    }
 
-    private static void adicionarLivro(Biblioteca biblioteca, Scanner scanner) {
-        System.out.print("Título do Livro: ");
-        String titulo = scanner.nextLine();
-        System.out.print("Nome do Autor: ");
-        String nomeAutor = scanner.nextLine();
-        System.out.print("Nacionalidade do Autor: ");
-        String nacionalidadeAutor = scanner.nextLine();
-
-        Autor autor = new Autor(nomeAutor, nacionalidadeAutor);
-        Livro livro = new Livro(titulo, autor, true);
-        biblioteca.adicionarLivro(livro);
-        System.out.println("Livro adicionado com sucesso!");
-    }
-
-    private static void listarLivros(Biblioteca biblioteca) {
-        List<Livro> livros = biblioteca.getLivros();
-
-        if (livros.isEmpty()) {
-            System.out.println("A biblioteca não possui livros no momento.");
-        } else {
-            System.out.println("Livros na Biblioteca:");
-            for (Livro livro : livros) {
-                System.out.println(livro);
-            }
-        }
-    }
-    private static void menuMidia(Scanner scanner, Biblioteca biblioteca) {
-        System.out.println("Menu de Mídia:");
-        System.out.println("1. Conversar com alguém sobre os livros que você escolheu");
-        System.out.println("2. Postar na Internet");
-        System.out.println("3. Voltar ao Menu Principal");
-        System.out.print("Escolha uma opção: ");
-    
-        int escolha = scanner.nextInt();
-        scanner.nextLine(); // Limpa o buffer
-    
-        switch (escolha) {
-            case 1:
-                conversarSobreLivros(scanner, biblioteca);
-                break;
-            case 2:
-            
-            System.out.println("Escolha a plataforma para postar:");
-            System.out.println("1. Google");
-            System.out.println("2. Instagram");
-            System.out.println("3. Facebook");
-            System.out.print("Escolha uma plataforma (1-3): ");
-            int escolhaPlataforma = scanner.nextInt();
-            scanner.nextLine(); // Limpa o buffer
-
-            switch (escolhaPlataforma) {
-                case 1:
-                    System.out.println("Você escolheu postar no Google.");
-                    postarNoGoogle();
+            switch (op) {
+                case 0: {
+                    System.out.println("Sair....");
                     break;
-                case 2:
-                    System.out.println("Você escolheu postar no Instagram.");
-                    postarNoInstagram();
+                }
+                case 1: {
+                    System.out.println("Digite o nome do autor");
+                    String nome = sc.next();
+                    System.out.println("Digite o nacionalidade do autor");
+                    String nacionalidade = sc.next();
+                    new Autor(nome, nacionalidade);
                     break;
-                case 3:
-                    System.out.println("Você escolheu postar no Facebook.");
-                    postarNoFacebook();
+                }
+                case 2: {
+                    System.out.println("Digite o titulo");
+                    String titulo = sc.next();
+                    System.out.println("Digie o ID do autor");
+                    int idAutor = sc.nextInt();
+                    new Livro(titulo, null, false, idAutor);
                     break;
-                default:
-                    System.out.println("Plataforma inválida. Tente novamente.");
+                }
+                case 3: {
+                    System.out.println("Digite o titulo");
+                    String titulo = sc.next();
+                    System.out.println("Digite o álbum");
+                    String album = sc.next();
+                    new MidiaDigital(titulo, album, false);
                     break;
+                }
+                case 4: {
+                    System.out.println("Digite o nome");
+                    String nome = sc.next();
+                    new Biblioteca(nome);
+                    break; 
+                }
+                case 5: {
+                    System.out.println("Digite o ID da biblioteca");
+                    Biblioteca.listarBibliotecas();
+                    int idBiblioteca = sc.nextInt();
+                    System.out.println("Selecione o ID do livro");
+                    Livro.listarLivros();
+                    int idLivro = sc.nextInt();
+                    Biblioteca.adicionarLivro(idBiblioteca, idLivro);
+                    break;
+                }
+                case 6: {
+                    System.out.println("Selecione o ID do livro que você deseja emprestar");
+                    Livro.listarLivros();
+                    int idLivro = sc.nextInt();
+                    Livro.emprestarLivro(idLivro);
+                    break;
+                }
+                case 7: {
+                    System.out.println("Selecione o ID do livro que você deseja devolver");
+                    Livro.listarLivros();
+                    int idLivro = sc.nextInt();
+                    Livro.devolverLivro(idLivro);
+                    break;
+                }
+                case 8: {
+                    System.out.println("Selecione o ID da biblioteca");
+                    Biblioteca.listarBibliotecas();
+                    int idBiblioteca = sc.nextInt();
+                    System.out.println("Selecione o ID da mídia digital");
+                    MidiaDigital.listarMidiaDigital();
+                    int idMidiaDigital = sc.nextInt();
+                    Biblioteca.adicionarMidiaDigital(idBiblioteca, idMidiaDigital);
+                    break;
+                }
+                case 9: {
+                    System.out.println("Selecione o ID da mídia digital que você deseja emprestar");
+                    MidiaDigital.listarMidiaDigital();
+                    int idMidiaDigital = sc.nextInt();
+                    MidiaDigital.emprestarMidiaDigital(idMidiaDigital);
+                    break;
+                }
+                case 10: {
+                    System.out.println("Selecione o ID da mídia digital que você deseja devolver");
+                    MidiaDigital.listarMidiaDigital();
+                    int idMidiaDigital = sc.nextInt();
+                    MidiaDigital.devolverMidiaDigital(idMidiaDigital);
+                    break;
+                }
+                default: {
+                    System.out.println("Opção inválida");
+                    break;
+                }
             }
-            break;
-            case 3:
-                System.out.println("Voltando ao Menu Principal.");
-                break;
-            default:
-                System.out.println("Opção inválida. Tente novamente.");
-                break;
-        }
-    }
-    
-    private static void conversarSobreLivros(Scanner scanner, Biblioteca biblioteca) {
-        List<Livro> livros = biblioteca.getLivros();
-        
-        if (livros.isEmpty()) {
-            System.out.println("Você ainda não adicionou nenhum livro à biblioteca.");
-        } else {
-            System.out.println("Livros disponíveis na biblioteca:");
-            for (int i = 0; i < livros.size(); i++) {
-                System.out.println((i + 1) + ". " + livros.get(i));
-            }
-            
-            System.out.print("Escolha um livro para conversar (digite o número): ");
-            int escolhaLivro = scanner.nextInt();
-            scanner.nextLine(); 
-            
-            if (escolhaLivro >= 1 && escolhaLivro <= livros.size()) {
-                Livro livroEscolhido = livros.get(escolhaLivro - 1);
-                System.out.println("Você escolheu conversar sobre o livro: " + livroEscolhido.getTitulo());
-                System.out.println("Amanda: Este livro é incrível! Gostei muito da história.");
-                System.out.println("Roberto: Este livro é incrível! Gostei muito da história.");
-            } else {
-                System.out.println("Opção inválida. Tente novamente.");
-            }
-        }
-    }
-    private static void postarNoGoogle() 
-    {
-        System.out.println("Postagem no Google realizada com sucesso!");
-        
-    }
-    
-    private static void postarNoInstagram() 
-    {
-        System.out.println("Postagem no Instagram realizada com sucesso!");
-    }
-    
-    private static void postarNoFacebook() 
-    {
-        System.out.println("Postagem no Facebook realizada com sucesso!");
+        } while (op != 0);
+        sc.close();
     }
 }

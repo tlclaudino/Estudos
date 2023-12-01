@@ -1,6 +1,7 @@
 package avaliacaoJava;
 
-class Midia {
+public class Midia {
+    
     private String titulo;
     private boolean disponivel;
 
@@ -9,36 +10,38 @@ class Midia {
         this.disponivel = disponivel;
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
-    public boolean isDisponivel() {
-        return disponivel;
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
+    }
+
+    public String getTitulo() {
+        return this.titulo;
+    }
+
+    public boolean getDisponivel() {
+        return this.disponivel;
+    }
+
+    public String toString() {
+        return "Título: " + this.titulo + ". Disponível: " + (this.disponivel ? "Sim" : "Não");
     }
 
     public void emprestar() throws Exception {
-        if (disponivel) {
-            disponivel = false;
-        } else {
-            throw new Exception("A mídia não está disponível para empréstimo.");
+        if (!this.disponivel) {
+            throw new Exception("Midia não está disponível");
         }
+        this.disponivel = false;
     }
 
     public void devolver() throws Exception {
-        if (!disponivel) {
-            disponivel = true;
-        } else {
-            throw new Exception("A mídia já está disponível.");
+        if (this.disponivel) {
+            throw new Exception("Midia já está disponível");
         }
+        this.disponivel = true;
     }
 
-    @Override
-    public String toString() {
-        return titulo + " (" + (disponivel ? "Disponível" : "Indisponível") + ")";
-    }
 }
